@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="googlebot" content="noindex,nofollow">
+	<meta name="publisher" content="Gürkan Özsoy">
+    <title>Twitter (X.Com)&#039;da Takipten Çıkanları Tespit Eden UserScript</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fcfcfc; color: #292929; line-height: 1.8; padding-bottom: 60px; }
+        
+        .site-header { width: 100%; background: #ffffff; border-bottom: 1px solid #eaeaea; text-align: center; padding: 14px 0; font-size: 15px; font-weight: 600; }
+        .site-header a { color: #1a1a1a; text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s ease; }
+        .site-header a:hover { color: #0066cc; }
+
+        .container { max-width: 720px; margin: 40px auto 0 auto; background: #ffffff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        h1.post-title { font-size: 32px; font-weight: 700; color: #111; margin-bottom: 25px; line-height: 1.3; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+        .post-body { font-size: 18px; color: #333333; word-wrap: break-word; }
+        .post-body p { margin-bottom: 20px; }
+        .post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 20px 0; display: block; }
+        .post-body h2, .post-body h3 { margin-top: 30px; margin-bottom: 15px; color: #111; }
+        .post-body a { color: #0066cc; text-decoration: underline; }
+        .post-body ul, .post-body ol { margin-left: 20px; margin-bottom: 20px; }
+        .post-body blockquote { border-left: 4px solid #0066cc; padding-left: 15px; margin: 20px 0; color: #555; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .container { margin: 15px; padding: 20px; }
+            h1.post-title { font-size: 24px; }
+            .post-body { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="https://gurkanozsoy.com" target="_blank">gurkanozsoy.com</a>
+    </header>
+
+    <main class="container">
+        <h1 class="post-title">Twitter (X.Com)&#039;da Takipten Çıkanları Tespit Eden UserScript</h1>
+        <article class="post-body">
+            <p>Benimki gibi küçük hesaplar için bir kullanıcı betiği (UserScript) yazdım. Bu script ile takipten çıkanların profil bağlantıları txt belgesi olarak indiriliyor. Bu sayede beni takipten çıkan herkesi, profil linklerini alıp tarayıcıda açarak takipten çıkıyorum. Aslında bunu yapan uygulamalar var ama çoğu paralı ve bence güvenilir değil. Her ne kadar güvenilir olduklarını iddia etseler de açıkçası bana çok güven vermiyorlar. Üstelik dediğim gibi, aylık 200 dolar gibi uçuk fiyatlarla abonelik satıyorlar.</p>
+<div class="alert alert-warning">
+    <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+    <div class="alert-content">
+        <strong>UYARI</strong>
+        <strong>Bir kez daha söylüyorum, bu scripti küçük hesaplarda kullanmak mantıklı! Çok sayıda takipçiniz varsa kullanmayın. Zira tek tek profil linki yapıştırıp takipten çıkmak sizin için mantıklı bir hareket değil. Siz başka bir yol bulmalısınız.</strong>
+    </div>
+<p></div></p>
+<p>Peki bu scripti nasıl kullanıyoruz?</p>
+<p>Önce Chrome tarayıcınıza Tampermonkey eklentisini kuruyorsunuz. Sonra eklentiye tıklayıp yeni betik oluştur diyorsunuz.</p>
+<p><img src="../content/uploads/68da3791be939-betik1.png" class="aligncenter" alt="" width="476" height="384"></p>
+<p>Açılan alandaki her şeyi silip aşağıdaki kodu yapıştırıyorsunuz.</p>
+<p><img src="../content/uploads/68da37a763f6a-betik2.PNG" class="aligncenter" alt="" width="1421" height="581"></p>
+<p>En son <strong>Dosya > Kaydet</strong> deyin, işlem tamamdır. Daha sonra Twitter (X.Com) profilinize giriyorsunuz. Profilinizde <strong>Takip edilen</strong> kısmına tıklayın ve sayfa açıldıktan sonra sayfayı yenileyin. Sağ altta bir buton çıkacak. Ona tıkladığınızda sayfa aşağı doğru kaymaya başlayacak. Butona birkaç kez tıklamak gerekebiliyor. İş bitince <strong>geri-takip-etmeyenler.txt</strong> belgesi bilgisayarınıza indirilecek.</p>
+<p><img src="../content/uploads/68da39120ac58-betik3.png" class="aligncenter" alt="" width="1076" height="139"></p>
+<p>Scriptin şöyle bir kusuru var: Diyelim sizi takipten çıkan kimse yok. Yine txt belgesi indiğini görüyorsunuz. İçeriği de takipçi listenizin yan tarafında görünen <strong>Kimi Takip Etmeli</strong> kısmındaki profillerden ibaret. Bunu yapmasını engellersem script daha işe yarar hale gelecektir diye düşünüyorum.</p>
+<p><script src="https://gist.github.com/gurkanozsoy/92d57c77b8d9a756c5a535899aa928cf.js"></script></p>
+        </article>
+    </main>
+
+</body>
+</html>
