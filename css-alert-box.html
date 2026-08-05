@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex,nofollow">
+	<meta name="googlebot" content="noindex,nofollow">
+	<meta name="publisher" content="Gürkan Özsoy">
+    <title>CSS Alert Box</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #fcfcfc; color: #292929; line-height: 1.8; padding-bottom: 60px; }
+        
+        .site-header { width: 100%; background: #ffffff; border-bottom: 1px solid #eaeaea; text-align: center; padding: 14px 0; font-size: 15px; font-weight: 600; }
+        .site-header a { color: #1a1a1a; text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s ease; }
+        .site-header a:hover { color: #0066cc; }
+
+        .container { max-width: 720px; margin: 40px auto 0 auto; background: #ffffff; padding: 40px 30px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        h1.post-title { font-size: 32px; font-weight: 700; color: #111; margin-bottom: 25px; line-height: 1.3; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; }
+        .post-body { font-size: 18px; color: #333333; word-wrap: break-word; }
+        .post-body p { margin-bottom: 20px; }
+        .post-body img { max-width: 100%; height: auto; border-radius: 6px; margin: 20px 0; display: block; }
+        .post-body h2, .post-body h3 { margin-top: 30px; margin-bottom: 15px; color: #111; }
+        .post-body a { color: #0066cc; text-decoration: underline; }
+        .post-body ul, .post-body ol { margin-left: 20px; margin-bottom: 20px; }
+        .post-body blockquote { border-left: 4px solid #0066cc; padding-left: 15px; margin: 20px 0; color: #555; font-style: italic; }
+
+        @media (max-width: 768px) {
+            .container { margin: 15px; padding: 20px; }
+            h1.post-title { font-size: 24px; }
+            .post-body { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="https://gurkanozsoy.com" target="_blank">gurkanozsoy.com</a>
+    </header>
+
+    <main class="container">
+        <h1 class="post-title">CSS Alert Box</h1>
+        <article class="post-body">
+            <p>Web sitelerinize ekleyeceğiniz iki güzel uyarı kutusu örneği yazacağım. Bunlardan ilkini bir yerden almıştım fakat nereden aldığımı hatırlamadığım için linkini ekleyemeyeceğim. Diğeri ise bana ait. İlk önce benim burada sık kullandığım tasarımı vereyim. </p><p>Bu iki tasarım <strong>Font Awesome 6.5.1</strong> ile uyumludur. İkisini aynı anda kullanmayın. </p><p><strong>Alert box 1</strong></p><p>Kodları ve demoyu görmek için <a href="https://gurkanozsoy.com/wp-content/uploads/2024/02/alert1.html" rel="noopener" target="_blank"><strong>tıklayın</strong></a>.</p><p>Hangi kutuyu kullanacaksınız HTML kodunu ona göre çoğaltabilirsiniz. Örneğin Info kutusu kullanacaksanız HTML koddaki <code>note--success</code> yerine <code>note--info</code> yazacaksınız. <a rel="nofollow" href="https://fontawesome.com/search?o=r&m=free" target="_blank"><strong>Font awesome</strong></a> sitesinden bir tane info ikonu seçersiniz.</p><hr><p>Bu da bir başka örnek.</p><p><strong>Alert box 2</strong></p><p>Kodları ve demoyu görmek için <a href="https://gurkanozsoy.com/wp-content/uploads/2024/02/alert2.html" rel="noopener" target="_blank"><strong>tıklayın</strong></a>.</p><p><strong>Çıktı</strong></p><p><a href="https://gurkanozsoy.com/wp-content/uploads/2024/02/outputs.jpg"><img loading="lazy" decoding="async" src="https://gurkanozsoy.com/wp-content/uploads/2024/02/outputs.jpg" alt="css alert box çıktıları" width="768" height="538" class="aligncenter"></a></p>
+        </article>
+    </main>
+
+</body>
+</html>
