@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Windows Sandbox Kurulum ve Kullanım</title>
+    <meta name="description" content="">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #222; max-width: 800px; margin: 0 auto 40px auto; padding: 0 20px; }
+        .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; margin-bottom: 30px; border-bottom: 1px solid #eaeaea; font-size: 0.9em; }
+        .top-links a { margin-left: 15px; color: #555; text-decoration: none; }
+        .top-links a:hover { color: #000; text-decoration: underline; }
+        .nav-back { color: #0066cc; text-decoration: none; }
+        .nav-back:hover { text-decoration: underline; }
+        h1 { line-height: 1.25; margin-bottom: 8px; }
+        .meta { color: #666; font-size: 0.9em; margin-bottom: 25px; }
+        img { max-width: 100%; height: auto; border-radius: 4px; display: block; margin: 15px 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        pre, code { background: #f4f4f4; border-radius: 3px; font-family: monospace; }
+        code { padding: 2px 5px; }
+        pre { padding: 15px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <header class="top-nav">
+        <a href="../index.html" class="nav-back">&larr; Yazı Listesi</a>
+        <div class="top-links">
+            <a href="https://gurkanozsoy.com" target="_blank" rel="noopener noreferrer">gurkanozsoy.com</a>
+            <a href="https://gurkanozsoy.github.io" target="_blank" rel="noopener noreferrer">gurkanozsoy.github.io</a>
+        </div>
+    </header>
+    <article>
+        <header>
+            <h1>Windows Sandbox Kurulum ve Kullanım</h1>
+            <div class="meta"><time>2026-04-03 14:02:00</time></div>
+        </header>
+        <main>
+            <p>Windows Sandbox, Microsoft Windows içinde yer alan, geçici ve izole bir test ortamıdır. Kısaca: Bilgisayarına zarar verme riski olan dosyaları, programları veya ayarları ana sistemden tamamen bağımsız bir “mini Windows” içinde denemenizi sağlar.</p>
+<p>🔍 <strong>Mantığı Nasıl Çalışır?</strong></p>
+<p>Windows Sandbox aslında bir tür hafif sanal makine (VM) gibi çalışır ama klasik VM’lerden daha hızlı ve pratiktir.</p>
+<p>Açtığında → tertemiz bir Windows başlatır<br>
+İçine dosya atarsın → test edersin<br>
+Kapatırsın → her şey silinir ❌<br>
+Ana sistem → hiç etkilenmez ✅</p>
+<p>Yani “dene, boz, kapat, unut” mantığıyla çalışır.</p>
+<p>🧠 <strong>Ne İşe Yarar?</strong><br>
+<strong>1. Şüpheli Dosyaları Açmak</strong> 🔐<br>
+İnternetten indirdiğin ama güvenmediğin bir .exe dosyası mı var?<br>
+→ Sandbox içinde çalıştırırsın<br>
+→ Virüs varsa bile ana sisteme bulaşmaz</p>
+<p><strong>2. Yazılım Testi</strong> 🧑‍💻<br>
+Bir programı kurup denemek istiyorsun ama sistemini kirletmek istemiyorsun<br>
+→ Sandbox aç → kur → dene → kapat → tertemiz</p>
+<p><strong>3. Zararlı Davranış Analizi</strong> 🕵️<br>
+Siber güvenlik tarafında:<br>
+Malware nasıl çalışıyor?<br>
+Sisteme ne yapıyor?</p>
+<p>gibi şeyleri gözlemlemek için kullanılır.</p>
+<p>🚨 <strong>Önemli Bir Detay</strong><br>
+Sandbox çok güvenlidir ama %100 “sihirli kalkan” değildir.<br>
+<strong>Özellikle</strong> donanım seviyesinde exploitler ve Gelişmiş malware’ler nadir de olsa risk oluşturabilir. Ama günlük kullanım için fazlasıyla güvenlidir.</p>
+<p>💡 <strong>Basit Bir Örnek</strong><br>
+Diyelim ki:“crack programı” indirdin. 😅 Açmaya korkuyorsun.</p>
+<p>👉 <strong>Yapacağın şey:</strong><br>
+1-Windows Sandbox aç<br>
+2-Dosyayı sürükle bırak<br>
+3-Çalıştır<br>
+4-Bitince Sandbox’ı kapat</p>
+<p>Hepsi bu. Sistem tertemiz kalır.</p>
+<p>🧭 Kısaca Windows Sandbox = Geçici + İzole + Tek tık test ortamı.</p>
+<p>Videoyu izleyin ve nasıl aktif edeceğinizi görün.</p>
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/BKx8t2kSS3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+        </main>
+    </article>
+</body>
+</html>

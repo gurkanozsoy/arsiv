@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alerts Box 1</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.flag {display: table;width: 100%;margin-top:4px;margin-bottom:15px;}
+.flag__image,
+.flag__body {display: table-cell;vertical-align: middle;}
+.flag--top .flag__image, .flag--top
+.flag__body {vertical-align: top;}
+.flag__image {padding-right: 24px;}
+.flag__image > img {display: block;max-width: none;}
+.flag--rev .flag__image {padding-right: 0;padding-left: 24px;}
+.flag__body {width: 100%;}
+.note {position: relative;overflow: hidden;color: white;background-color: #E91E63;font-weight:bold;}
+.note--secondary {background-color: #263238;}
+.note--success {background-color: #4CAF50;}
+.note--warning {background-color: #FFC107;color: black;}
+.note--error {background-color: #d50000;}
+.note--info {background-color: #03A9F4;}
+.note__icon,.note__text {padding: 24px;}
+.note__icon {min-width: 80px;text-align: center;font-size: 32px;font-size: 2rem;background-color: rgba(0, 0, 0, 0.25);}
+.note__text {padding-right: 48px;}</style>
+</head>
+<body>
+<p>CSS kodlarını sayfa kaynak kodundan alırsınız (Ctrl+U). Kutuları kullanırken şöyle bir HTML kodu yazacaksınız:</p>
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(0, 0, 0); background: rgb(255, 255, 255);">&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag note note--success"</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__image note__icon"</span>&gt;
+&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-thumbs-up"</span>&gt;&lt;/i&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__body note__text"</span>&gt;
+success kutu içeriği buraya...
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag note note--info"</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__image note__icon"</span>&gt;
+&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-circle-info"</span>&gt;&lt;/i&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__body note__text"</span>&gt;
+success kutu içeriği buraya...
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag note note--warning"</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__image note__icon"</span>&gt;
+&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-triangle-exclamation"</span>&gt;&lt;/i&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__body note__text"</span>&gt;
+warning kutu içeriği buraya...
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag note note--error"</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__image note__icon"</span>&gt;
+&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-thumbs-up"</span>&gt;&lt;/i&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"flag__body note__text"</span>&gt;
+<span class="hljs-keyword" style="font-weight: 700; color: navy;">error</span> kutu içeriği buraya...
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;</pre>
+<hr>
+<div class="flag note note--success">
+<div class="flag__image note__icon">
+<i class="fa-solid fa-thumbs-up"></i>
+</div>
+<div class="flag__body note__text">
+success kutu içeriği buraya...</div></div>
+<div class="flag note note--info">
+<div class="flag__image note__icon">
+<i class="fa-solid fa-circle-info"></i>
+</div>
+<div class="flag__body note__text">
+success kutu içeriği buraya...
+</div></div>
+<div class="flag note note--warning">
+<div class="flag__image note__icon">
+<i class="fa-solid fa-triangle-exclamation"></i>
+</div>
+<div class="flag__body note__text">
+warning kutu içeriği buraya...</div></div>
+<div class="flag note note--error">
+<div class="flag__image note__icon">
+<i class="fa-solid fa-bug"></i>
+</div>
+<div class="flag__body note__text">
+error kutu içeriği buraya...
+</div></div>
+<p>Konuya <a href="https://gurkanozsoy.com/code-is-poetry/css-alert-box/">geri dön</a></p>
+</body>
+</html>

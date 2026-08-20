@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Soyut Matematik Sembolik Mantık Ders Notu</title>
+    <meta name="description" content="">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #222; max-width: 800px; margin: 0 auto 40px auto; padding: 0 20px; }
+        .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; margin-bottom: 30px; border-bottom: 1px solid #eaeaea; font-size: 0.9em; }
+        .top-links a { margin-left: 15px; color: #555; text-decoration: none; }
+        .top-links a:hover { color: #000; text-decoration: underline; }
+        .nav-back { color: #0066cc; text-decoration: none; }
+        .nav-back:hover { text-decoration: underline; }
+        h1 { line-height: 1.25; margin-bottom: 8px; }
+        .meta { color: #666; font-size: 0.9em; margin-bottom: 25px; }
+        img { max-width: 100%; height: auto; border-radius: 4px; display: block; margin: 15px 0; }
+        a { color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        pre, code { background: #f4f4f4; border-radius: 3px; font-family: monospace; }
+        code { padding: 2px 5px; }
+        pre { padding: 15px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <header class="top-nav">
+        <a href="../index.html" class="nav-back">&larr; Yazı Listesi</a>
+        <div class="top-links">
+            <a href="https://gurkanozsoy.com" target="_blank" rel="noopener noreferrer">gurkanozsoy.com</a>
+            <a href="https://gurkanozsoy.github.io" target="_blank" rel="noopener noreferrer">gurkanozsoy.github.io</a>
+        </div>
+    </header>
+    <article>
+        <header>
+            <h1>Soyut Matematik Sembolik Mantık Ders Notu</h1>
+            <div class="meta"><time>2025-10-04 09:33:00</time></div>
+        </header>
+        <main>
+            <p>Gerçeği ararken yapılan zihin işlemlerinden hangilerinin doğru ve hangilerinin yanlış olduğunu gösteren bilime mantık denir.</p>
+<p>Doğru ile yanlıştan biri ve yalnız biri ile nitelenebilen bir bildiri cümlesine önerme denir.</p>
+<p>Bir önerme doğru ise bu önermeye 1 sayısı (veya D harfi), yanlış ise 0 sayısı (veya Y harfi) karşılık getirilir. Bu sayıya (veya harfe) önermenin doğruluk değeri denir.</p>
+<div class="alert alert-info">
+    <i class="fa-solid fa-circle-info alert-icon"></i>
+    <div class="alert-content">
+        <strong>NOT 1</strong>
+        n tane önerme için önermelerin doğruluk değeri $2^n$ ile belirlenir. 
+    </div>
+<p></div></p>
+<p>Doğruluk değerleri eşit olan iki önermeye mantıkça denk veya kısaca denk önermeler denir.</p>
+<p>Bir p önermesi verilmiş olsun. p önermesi doğru iken bundan yanlış bir önerme, yanlış iken doğru önerme elde etmeye önermeyi olumsuzlama veya önermeyi değilleme denir. p önermesinden olumsuzlama ile elde edilen önermeye, p önermesnin olumsuzu veya değili denir. $\neg p$, $\overline{p}$, $\sim p$ veya $p'$ gibi sembollerle gösterilir. Bu ders notunda bir önermenin olumsuzu $p'$ ile gösterilecektir.</p>
+<p>İki ya da daha çok önerme "ve", "veya", "ise" ile "ancak ve ancak" bağlaçlarından en az biri kullanılarak birbirine bağlanabilir ve böylelikle yeni önermeler tanımlanabilir. Bu şekilde elde edilen önermelere bileşik önermeler denir.</p>
+<h2>VE Bağlacı</h2>
+<p>"p ve q" ifadesi, p ve q önermelerinin her ikisi doğru olduğunda doğru, aksi durumlarda yanlış olan bir bileşik önermedir. Aşağıda iki önerme için $p \land q$ bileşik önermesinin doğruluk tablosunu görüyorsunuz.</p>
+<p>$\begin{array}{c|c|c}<br>
+p & q & p \land q \\ \hline<br>
+1 & 1 & 1 \\<br>
+1 & 0 & 0 \\<br>
+0 & 1 & 0 \\<br>
+0 & 0 & 0<br>
+\end{array}$</p>
+<h2>VEYA Bağlacı</h2>
+<p>"p veya q" ifadesi, p ve q önermelerinin her ikisi yanlış olduğunda yanlış, aksi durumlarda doğru olan bir bileşik önermedir. Aşağıda iki önerme için $p \vee q$ bileşik önermesinin doğruluk tablosunu görüyorsunuz.</p>
+<p>$\begin{array}{c|c|c}<br>
+p & q & p \vee q \\ \hline<br>
+1 & 1 & 1 \\<br>
+1 & 0 & 1 \\<br>
+0 & 1 & 1 \\<br>
+0 & 0 & 0<br>
+\end{array}$</p>
+<h2>İSE Bağlacı</h2>
+<p>"p ise q" ifadesi, p önermesi doğru ve q önermesi yanlış iken yanlı, diğer durumlarda doğru olan bir bileşik önermedir. $p \Rightarrow q$ önermesine koşullu önerme denir. p önermesine koşullu önermenin <strong>hipotezi (varsayımı)</strong>, q önermesine de <strong>hükmü (yargısı)</strong> denir. Aşağıda iki önerme için $p \Rightarrow q$ bileşik önermesinin doğruluk tablosunu görüyorsunuz.</p>
+<p>$\begin{array}{c|c|c}<br>
+p & q & p \Rightarrow q \\ \hline<br>
+1 & 1 & 1 \\<br>
+1 & 0 & 0 \\<br>
+0 & 1 & 1 \\<br>
+0 & 0 & 1<br>
+\end{array}$</p>
+<p>Burada p önermesine q için <strong>yeter koşul</strong>, q önermesine de p için <strong>gerek koşul</strong> denir.</p>
+<p>$p \Rightarrow q$ koşullu önerme olsun. $p' \Rightarrow q'$, $q \Rightarrow p$ ve $q' \Rightarrow p'$ önermelerine sırasıyla $p \Rightarrow q$ önermesinin <strong>tersi</strong>, <strong>karşıtı</strong> ve <strong>karşıt tersi</strong> denir.</p>
+<div class="alert alert-info">
+    <i class="fa-solid fa-circle-info alert-icon"></i>
+    <div class="alert-content">
+        <strong>NOT 2</strong>
+        Doğru oldukları önceden ispatlanmış olan önermelere teorem denir
+    </div>
+<p></div></p>
+<h2>ANCAK VE ANCAK Bağlacı</h2>
+<p>Bu bağlaç farklı kaynaklarda "yalnız ve yalnız" olarak da ifade edilir. Her iki önerme aynı anda doğru veya aynı anda yanlış olduğunda doğru, diğer durumlarda yanlış olan bir önermedir.</p>
+<p>p ve q herhangi iki önerme olmak üzere $(p \Rightarrow q) \land (q \Rightarrow p)$ bileşik önermesine iki yönlü koşullu önerme denir.</p>
+<div class="mathm" id="wrap">
+$\begin{array}{c|c|c|c|c|c}
+p & q & p \Rightarrow q & q \Rightarrow p & (p \Rightarrow q) \land (q \Rightarrow p) & p \Leftrightarrow q \\ \hline
+1 & 1 & 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 1 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 1 & 1 & 1
+\end{array}$
+</div>
+<p>p, q, r,... harflerinden her biri değişken önermeleri göstermek üzere, bunlar yerine değişmez önermeler konulduğunda önermeye dönüşen ifadelere <strong>önerme formülü</strong> (veya <strong>önerme kalıbı</strong> veya Boole polinomu) denir.</p>
+<p>Değişkenleri yerine yazılacak her bir önerme için doğru bir önerme veren önerme formülüne <strong>uyuşma</strong> (totoloji), yanlış bir önerme veren önerme formülüne çelişme denir.</p>
+<p>Değişkenleri yerine yazılacak her önerme için aynı doğruluk değerinde önermeler veren iki önerme formülüne birbirine <strong>mantıkça denk önerme formülü</strong> veya kısaca <strong>denk önerme formülü</strong> denir.</p>
+<p><b>Temel Özellikler</b><br></p>
+<p>Tanım: p,q ve r önermeleri, t doğru önerme, f yanlış önerme olsun.</p>
+<p>$ a)\; p \lor t \equiv p \quad (\text{özdeşlik özelliği}) $</p>
+<p>$ b)\; p \land f \equiv p \quad (\text{özdeşlik özelliği}) $</p>
+<p>$ c)\; p \lor q \equiv q \lor p \quad (\text{değişme}) $</p>
+<p>$ d)\; p \land q \equiv q \land p \quad (\text{değişme}) $</p>
+<p>$ e)\; (p \lor q) \lor r \equiv p \lor (q \lor r) \quad (\text{birleşme}) $</p>
+<p>$ f)\; (p \land q) \land r \equiv p \land (q \land r) \quad (\text{birleşme}) $</p>
+<p>$ g)\; p \lor (q \land r) \equiv (p \lor q) \land (p \lor r) \quad (\text{dağılma}) $</p>
+<p>$ h)\; p \land (q \lor r) \equiv (p \land q) \lor (p \land r) \quad (\text{dağılma}) $</p>
+<p>$ i)\; (p \lor q) \lor r \equiv (p \lor r) \lor (q \lor r) \quad (\text{dağılma}) $</p>
+<p>$ j)\; (p \land q) \land r \equiv (p \land r) \land (q \land r) \quad (\text{dağılma}) $ <br>
+t = geçerli önerme, f = yanlış önerme</p>
+<p>$ k)\; p \lor t \equiv p \quad \text{ve} \quad p \lor f \equiv f \quad (\lor \text{ için özdeşlik}) $</p>
+<p>$ l)\; p \land t \equiv 1 \quad \text{ve} \quad p \land f \equiv p \quad (\land \text{ için özdeşlik}) $</p>
+<p>$ m)\; p \lor p' \equiv f \quad (\lor \text{ için tanımsal özdeşlik}) $</p>
+<p>$ n)\; p \land p' \equiv t \quad (\land \text{ için tanımsal özdeşlik}) $</p>
+<p>$ o)\; (p')' \equiv p \quad (\text{Değillemenin özelliği}) $</p>
+<p>$ p)\; (p \lor q)' \equiv p' \land q' \quad (\lor \text{ için De Morgan}) $</p>
+<p>$ r)\; (p \land q)' \equiv p' \lor q' \quad (\land \text{ için De Morgan}) $</p>
+<p>$ s)\; p \Rightarrow q \equiv p' \lor q $</p>
+<p>$ v)\; p \Rightarrow q \equiv q' \Rightarrow p' $</p>
+<h3>Bağlaçların Elektrik Devrelerine Uygulanması</h3>
+<p>Burada basitçe bağlaçların elektrik devrelerine nasıl uygulanacağını anlatalım. Matematik bölümü öğrencileri için aşağıdaki bilgiler yeterlidir.</p>
+<p>Bir devrede anahtar, önermeyi temsil eder. Eğer anahtarlar seri bağlanmışsa yani aynı hizadaysa seri bağlantı yapılmış demektir. Burada "VE" bağlacını kullanırız. Diğer durumda paralel bağlantı söz konusudur. Böyle olunca da "VEYA" bağlacını kullanırız. Aşağıdaki resme bakın.</p>
+<p><img src="../content/uploads/68e0fc818c4d4-elektrikdevreleri.png" class="aligncenter" alt="" width="1312" height="2297"></p>
+<p>Burada 1 numaralı devreye karşılık gelen önerme $p \vee (q \land r)$ biçimindedir. Burada q ve r önermeleri seri bağlantıyı temsil eder. p önermesi ile (q ve r) önermeleri paralel bağlıdır. O yüzden bunları birleştirirken "veya" bağlacını kullanırız.</p>
+<p>Diğer devrelere denk gelen önermeleri kendiniz yazabilirsiniz.</p>
+<h3>Örnekler</h3>
+<p><strong>1.</strong> p ve q önermeleri doğru olduğuna göre, $p \vee (q' \Rightarrow p)$ bileşik önermesinin doğruluk değeri nedir?</p>
+<p><strong>CEVAP:</strong> q doğru olduğundan $q'$ yanlış olur. Buna göre $q' \Rightarrow p$ önermesi doğrudur (neden?). p doğru ve $q' \Rightarrow p$ önermesi doğru olduğuna göre verilen önermenin doğruluk değeri 1'dir.<br>
+<hr><br>
+<strong>2.</strong> İSE bağlacının birleşme özelliği var mıdır?</p>
+<p><strong>CEVAP:</strong> p, q ve r önermeler olmak üzere bize sorulan şey $p \Rightarrow (q \Rightarrow r)$ önermesi $(p \Rightarrow q) \Rightarrow r)$ önermesine denk olup olmadığı.</p>
+<p>Hemen tablo yaparak bunun doğru olup olmadığını gösterebiliriz.</p>
+<div class="mathm" id="wrap">
+<p>$\begin{array}{c|c|c|c|c|c|c}<br>
+p & q & r & (p \Rightarrow q) & (p \Rightarrow q) \Rightarrow r & (q \Rightarrow r) & p \Rightarrow(q \Rightarrow r)\\<br>
+\hline<br>
+1 & 1 & 1 & 1 & 1 & 1 & 1\\<br>
+1 & 1 & 0 & 1 & 0 & 0 & 0\\<br>
+1 & 0 & 1 & 0 & 1 & 1 & 1\\<br>
+1 & 0 & 0 & 0 & 1 & 1 & 1\\<br>
+0 & 1 & 1 & 1 & 1 & 1 & 1\\<br>
+0 & 1 & 0 & 1 & \mathbf{0} & 0 & \mathbf{1}\\<br>
+0 & 0 & 1 & 1 & 1 & 1 & 1\\<br>
+0 & 0 & 0 & 1 & \mathbf{0} & 1 & \mathbf{1}\\<br>
+\end{array}$</p></div>
+<p>Tablodan anlayacağımız üzere, <strong>İSE bağlacının birleşme özelliği yoktur</strong>.</p>
+<p><hr><br>
+<strong>3.</strong > Temel özelliklerden yararlanarak aşağıdaki önerme formüllerini en sade biçimde yazınız.</p>
+<ol>
+      <li> \( (p \lor q) \land p' \)</li>
+      <li> \( p \lor (p \land q) \)</li>
+      <li> \( (p \lor q)' \lor (p' \land q) \)</li>
+    </ol>
+<p><strong>CEVAPLAR:</strong></p>
+<div class="mathm" id="wrap">
+<p><strong>a)</strong> $(p \lor q) \land p'<br>
+ \equiv<br>
+ (p \land p') \lor (q \land p')<br>
+ \equiv<br>
+ q \lor p'<br>
+ \equiv<br>
+ p' \lor q$</p>
+</div>
+<div class="mathm" id="wrap">
+<p><strong>b)</strong> $p \lor (p \land q)<br><br>
+ \equiv<br><br>
+ (p \land t) \lor (p \land q)<br><br>
+ \equiv<br><br>
+ p \land (t \lor q)<br><br>
+ \equiv<br><br>
+ p \land t<br><br>
+ \equiv<br><br>
+ p$</p>
+<p><em>Burada</em> \( t \) <em>doğru bir önermeyi (totoloji) temsil eder.</em></p>
+</div>
+<div class="mathm" id="wrap">
+<p><strong>c)</strong> $(p \lor q)' \lor (p' \land q)<br><br>
+ \equiv<br><br>
+ (p' \land q') \lor (p' \land q)<br><br>
+ \equiv<br><br>
+ p' \land (q' \lor q)<br><br>
+ \equiv<br><br>
+ p' \land t<br><br>
+ \equiv<br><br>
+ p'$<br>
+</p>
+</div>
+<p><hr></p>
+<p><strong>4.</strong> $[(p \Rightarrow q)\land(p \Rightarrow r)] \equiv [\,p \Rightarrow (q \land r)\,]$ olduğunu gösteriniz.</p>
+<p><strong>CEVAP:</strong> $ (p \Rightarrow q)\land(p \Rightarrow r) \equiv (p'\lor q)\land(p'\lor r) $</p>
+<p>$ \equiv \; p' \lor (q\land r) $</p>
+<p>$ \equiv \; p \Rightarrow (q\land r) $</p>
+<p><hr></p>
+<p><strong>5.</strong> $\;[\,p' \Rightarrow (q \Rightarrow r')\,] \equiv [\,(q\land r)\Rightarrow p\,]'$ olduğunu gösteriniz.</p>
+<p><strong>CEVAP:</strong> $ p' \Rightarrow (q \Rightarrow r') \equiv p \lor (q' \lor r') $</p>
+<p>$ \equiv (q\land r)'\,\lor\, p $</p>
+<p>$ \equiv (q\land r) \Rightarrow p $</p>
+<p><hr></p>
+<p><strong>6.</strong> Temel özelliklerden yararlanarak aşağıdaki denkliklerin doğru olduğunu gösteriniz.</p>
+<p>a) $\; p \Rightarrow \big(q \Rightarrow (p\land q)\big) \equiv (p\land q)'\,\lor\,(p\land q)$</p>
+<p>b) $\; (p \Rightarrow q)\land(p \Rightarrow r) \equiv p \Rightarrow (q\land r)$</p>
+<p><strong>CEVAP:</strong></p>
+<p>a) $\; p \Rightarrow [\,q \Rightarrow (p\land q)\,] \equiv p' \lor (q' \lor (p\land q)) $</p>
+<p>$\qquad \equiv (p' \lor q') \lor (p\land q)$</p>
+<p>$\qquad \equiv (p\land q)'\,\lor\,(p\land q)$</p>
+<p>b) $\; (p \Rightarrow q)\land(p \Rightarrow r) \equiv (p'\lor q)\land(p'\lor r)$</p>
+<p>$\qquad \equiv p' \lor (q\land r)$</p>
+<p>$\qquad \equiv p \Rightarrow (q\land r)$</p>
+
+        </main>
+    </article>
+</body>
+</html>
