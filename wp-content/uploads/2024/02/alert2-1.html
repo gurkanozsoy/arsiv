@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alerts Box 2</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+.note {
+    position: relative; /* İkonun pozisyonlandırılması için gerekli */
+    display: flex; /* İçerikleri yatay eksende hizalar */
+    align-items: stretch; /* İçerikleri dikeyde esnetir */
+    width: 80%;max-width: 100%;
+    margin-left: auto; /* Sol tarafından otomatik boşluk */
+    margin-right: auto; /* Sağ tarafından otomatik boşluk */
+    margin-top: 50px; /* Üstten boşluk, kutuyu aşağı indirir */
+    margin-bottom: 50px; /* Alttan boşluk */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Eşit gölge efekti */
+}
+
+    .note-icon {
+    position: absolute; /* İkonun mutlak pozisyonlandırması */
+    top: -15px; /* İkonu daha fazla dışa taşı */
+    left: -25px; /* İkonu sol tarafa taşı */
+    display: flex; /* İkonu merkeze almak için */
+    justify-content: center; /* İçerikleri yatay eksende ortalar */
+    align-items: center; /* İçerikleri dikeyde ortalar */        
+    color: white; /* İkon rengi beyaz */
+    padding: 9px; /* İkon alanı */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 36px; /* İkon boyutunu 36x36 olarak ayarla */
+    width: 30px; /* İkonun genişliğini 36px yap */
+    height: 30px; /* İkonun yüksekliğini 36px yap */
+    font-weight: bold; /* İkonları kalın yap */
+}
+
+
+    .note-content {
+        background-color: white; /* İçerik arka planı beyaz */
+        width: 100%; /* Geri kalan alanı kaplar */
+        padding: 20px; /* İçerik için boşluk */
+        border-radius: 0 5px 5px 0; /* Sağ üst ve sağ alt köşe yuvarlak */        
+        border-left: 4px solid; /* Renk değişkeni ile dinamik renklendirme */
+    }	
+
+    .note-content p {
+        margin: 0 10px auto 20px; /* Paragrafın varsayılan dış boşluğunu kaldırır */
+        color: black; /* Metin rengi siyah */
+        font-size: 20px; /* Metin boyutu */
+		text-align:justify;
+    }	
+	
+	/* İkon ve border renkleri için CSS değişkenleri */
+:root {
+    --info-color: #2196F3;
+    --warning-color: #FFC107;
+	--success-color: #4CAF50;
+	--error-color: #d50000;
+}
+.note-icon.info, .note-content.info {color: var(--info-color);border-color: var(--info-color);}
+.note-icon.info{background-color: var(--info-color);color:white;}
+
+.note-icon.warning, .note-content.warning {color: var(--warning-color);border-color: var(--warning-color);}
+.note-icon.warning{background-color: var(--warning-color);color:white;}
+
+.note-icon.success, .note-content.success {color: var(--success-color);border-color: var(--success-color);}
+.note-icon.success{background-color: var(--success-color);color:white;}
+
+.note-icon.error, .note-content.error {color: var(--error-color);border-color: var(--error-color);}
+.note-icon.error{background-color: var(--error-color);color:white;}
+</style>
+</head>
+<body>
+
+<p>Önce CSS dosyanıza şunu ekleyin:</p>
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(0, 0, 0); background: rgb(255, 255, 255);">
+.note {
+    position: relative; /* İkonun pozisyonlandırılması için gerekli */
+    display: flex; /* İçerikleri yatay eksende hizalar */
+    align-items: stretch; /* İçerikleri dikeyde esnetir */
+    width: 80%;max-width: 100%;
+    margin-left: auto; /* Sol tarafından otomatik boşluk */
+    margin-right: auto; /* Sağ tarafından otomatik boşluk */
+    margin-top: 50px; /* Üstten boşluk, kutuyu aşağı indirir */
+    margin-bottom: 50px; /* Alttan boşluk */
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Eşit gölge efekti */
+}
+
+    .note-icon {
+    position: absolute; /* İkonun mutlak pozisyonlandırması */
+    top: -15px; /* İkonu daha fazla dışa taşı */
+    left: -25px; /* İkonu sol tarafa taşı */
+    display: flex; /* İkonu merkeze almak için */
+    justify-content: center; /* İçerikleri yatay eksende ortalar */
+    align-items: center; /* İçerikleri dikeyde ortalar */        
+    color: white; /* İkon rengi beyaz */
+    padding: 9px; /* İkon alanı */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 36px; /* İkon boyutunu 36x36 olarak ayarla */
+    width: 30px; /* İkonun genişliğini 36px yap */
+    height: 30px; /* İkonun yüksekliğini 36px yap */
+    font-weight: bold; /* İkonları kalın yap */
+}
+
+
+    .note-content {
+        background-color: white; /* İçerik arka planı beyaz */
+        width: 100%; /* Geri kalan alanı kaplar */
+        padding: 20px; /* İçerik için boşluk */
+        border-radius: 0 5px 5px 0; /* Sağ üst ve sağ alt köşe yuvarlak */        
+        border-left: 4px solid; /* Renk değişkeni ile dinamik renklendirme */
+    }	
+
+    .note-content p {
+        margin: 0 10px auto 20px; /* Paragrafın varsayılan dış boşluğunu kaldırır */
+        color: black; /* Metin rengi siyah */
+        font-size: 20px; /* Metin boyutu */
+		text-align:justify;
+    }	
+	
+	/* İkon ve border renkleri için CSS değişkenleri */
+:root {
+    --info-color: #2196F3;
+    --warning-color: #FFC107;
+	--success-color: #4CAF50;
+	--error-color: #d50000;
+	--question-color: #263238;
+	--q-color: #000000;
+	--def-color: #FE7000;
+	--duyuru-color: #0000FF;
+	--teo-color: #E91E63;
+}
+.note-icon.info, .note-content.info {color: var(--info-color);border-color: var(--info-color);}
+.note-icon.info{background-color: var(--info-color);color:white;}
+
+.note-icon.warning, .note-content.warning {color: var(--warning-color);border-color: var(--warning-color);}
+.note-icon.warning{background-color: var(--warning-color);color:white;}
+
+.note-icon.success, .note-content.success {color: var(--success-color);border-color: var(--success-color);}
+.note-icon.success{background-color: var(--success-color);color:white;}
+
+.note-icon.error, .note-content.error {color: var(--error-color);border-color: var(--error-color);}
+.note-icon.error{background-color: var(--error-color);color:white;}
+</pre>
+
+<p>Ardından HTML kodunuzu yazın:</p>
+
+<pre class="hljs" style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(0, 0, 0); background: rgb(255, 255, 255);">&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note"</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-icon info"</span>&gt;&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-circle-info"</span>&gt;&lt;/i&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+  &lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-content info"</span>&gt;
+    &lt;p&gt;Info içeriği...&lt;/p&gt;
+  &lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note"</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-icon warning"</span>&gt;&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-radiation"</span>&gt;&lt;/i&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-content warning"</span>&gt;
+    &lt;p&gt;Warning içeriği...&lt;/p&gt;
+  &lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note"</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-icon success"</span>&gt;&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-regular fa-thumbs-up"</span>&gt;&lt;/i&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-content success"</span>&gt;
+    &lt;p&gt;success içeriği...&lt;/p&gt;
+  &lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+
+&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note"</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-icon error"</span>&gt;&lt;i <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"fa-solid fa-bug"</span>&gt;&lt;/i&gt;&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;&lt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span> <span class="hljs-built_in">class</span>=<span class="hljs-string" style="font-weight: 700; color: green;">"note-content error"</span>&gt;
+    &lt;p&gt;<span class="hljs-keyword" style="font-weight: 700; color: navy;">error</span> içeriği...&lt;/p&gt;
+  &lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;
+&lt;/<span class="hljs-keyword" style="font-weight: 700; color: navy;">div</span>&gt;</pre>
+<hr>
+<div class="note"><div class="note-icon info"><i class="fa-solid fa-circle-info"></i></div>
+  <div class="note-content info">
+    <p>Info içeriği...</p>
+  </div>
+</div>
+
+<div class="note"><div class="note-icon warning"><i class="fa-solid fa-radiation"></i></div><div class="note-content warning">
+    <p>Warning içeriği...</p>
+  </div>
+</div>
+
+<div class="note"><div class="note-icon success"><i class="fa-regular fa-thumbs-up"></i></div><div class="note-content success">
+    <p>success içeriği...</p>
+  </div>
+</div>
+
+<div class="note"><div class="note-icon error"><i class="fa-solid fa-bug"></i></div><div class="note-content error">
+    <p>error içeriği...</p>
+  </div>
+</div>
+<p>Konuya <a href="https://gurkanozsoy.com/code-is-poetry/css-alert-box/">geri dön</a></p>
+</body>
+</html>
