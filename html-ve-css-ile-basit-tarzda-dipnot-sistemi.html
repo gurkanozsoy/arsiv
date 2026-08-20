@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="robots" content="noindex,nofollow">
 	<meta name="googlebot" content="noindex,nofollow">
-	<meta name="publisher" content="Gürkan Özsoy">
+	<meta name="publisher" content="G&uuml;rkan &Ouml;zsoy">
     <title>HTML ve CSS ile Basit Tarzda Dipnot Sistemi</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,17 +41,17 @@
     <main class="container">
         <h1 class="post-title">HTML ve CSS ile Basit Tarzda Dipnot Sistemi</h1>
         <article class="post-body">
-            <p>Wikipedia'daki sisteme kısmen benzeyen bir dipnot sistemi için basit bir HTML ve CSS dosyası hazırladım.</p>
-<p>Bu dosya, dipnotları sayfa içinde kolayca yönetmenizi ve düzenlemenizi sağlıyor. Dipnot numarasına tıkladığınızda sayfanın altındaki ilgili dipnotun üzerine gelirsiniz ve dipnottaki geri ok simgesine tıkladığınızda da kaldığınız yere dönersiniz.</p>
-<p>Bu tek dosyalık yapıyı kullanarak kendi metinlerinize kolayca dipnot ekleyebilirsiniz. Eğer bu sistemi daha karmaşık bir proje için kullanmak isterseniz, daha gelişmiş bir yapıda nasıl uygulayabileceğiniz size kalmış.</p>
+            <p>Wikipedia'daki sisteme k&#305;smen benzeyen bir dipnot sistemi i&ccedil;in basit bir HTML ve CSS dosyas&#305; haz&#305;rlad&#305;m.</p>
+<p>Bu dosya, dipnotlar&#305; sayfa i&ccedil;inde kolayca y&ouml;netmenizi ve d&uuml;zenlemenizi sa&#287;l&#305;yor. Dipnot numaras&#305;na t&#305;klad&#305;&#287;&#305;n&#305;zda sayfan&#305;n alt&#305;ndaki ilgili dipnotun &uuml;zerine gelirsiniz ve dipnottaki geri ok simgesine t&#305;klad&#305;&#287;&#305;n&#305;zda da kald&#305;&#287;&#305;n&#305;z yere d&ouml;nersiniz.</p>
+<p>Bu tek dosyal&#305;k yap&#305;y&#305; kullanarak kendi metinlerinize kolayca dipnot ekleyebilirsiniz. E&#287;er bu sistemi daha karma&#351;&#305;k bir proje i&ccedil;in kullanmak isterseniz, daha geli&#351;mi&#351; bir yap&#305;da nas&#305;l uygulayabilece&#287;iniz size kalm&#305;&#351;.</p>
 <p>Toparlarsam...</p>
 <ul>
-<li>Metindeki [1] gibi dipnot numaralarına tıkladığınızda sayfanın altındaki ilgili dipnotun üzerine gidersiniz.</li>
-<li>Dipnotların başındaki ↑ okuna tıkladığınızda ise sizi metindeki ilgili dipnot numarasına geri götürür.</li>
+<li>Metindeki [1] gibi dipnot numaralar&#305;na t&#305;klad&#305;&#287;&#305;n&#305;zda sayfan&#305;n alt&#305;ndaki ilgili dipnotun &uuml;zerine gidersiniz.</li>
+<li>Dipnotlar&#305;n ba&#351;&#305;ndaki &uarr; okuna t&#305;klad&#305;&#287;&#305;n&#305;zda ise sizi metindeki ilgili dipnot numaras&#305;na geri g&ouml;t&uuml;r&uuml;r.</li>
 </ul>
-<p>Dipnotlarda kullandığımız ↑ sembolünün üzerine geldiğinizde "Metindeki referansa dön" gibi bir açıklama da gösterilecek. Bu sayede geri dönüş işlevi daha net anlaşılabilir olmakta.</p>
-<h2>Peki nasıl kullanacaksınız?</h2>
-<p>İlgili kodları projenize ekleyebilirsiniz.</p>
+<p>Dipnotlarda kulland&#305;&#287;&#305;m&#305;z &uarr; sembol&uuml;n&uuml;n &uuml;zerine geldi&#287;inizde "Metindeki referansa d&ouml;n" gibi bir a&ccedil;&#305;klama da g&ouml;sterilecek. Bu sayede geri d&ouml;n&uuml;&#351; i&#351;levi daha net anla&#351;&#305;labilir olmakta.</p>
+<h2>Peki nas&#305;l kullanacaks&#305;n&#305;z?</h2>
+<p>&#304;lgili kodlar&#305; projenize ekleyebilirsiniz.</p>
 <p class="codepen" data-height="300" data-theme-id="light" data-default-tab="html,result" data-slug-hash="WbrwWwN" data-pen-title="dipnot" data-user="grknzsy" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/grknzsy/pen/WbrwWwN">
   dipnot</a> by grknzsy (<a href="https://codepen.io/grknzsy">@grknzsy</a>)
@@ -59,17 +59,17 @@
 </p>
 <p>Koddaki</p>
 <pre><code class="language-html">
-&lt;sup class=&quot;footnote&quot; id=&quot;ref-1&quot;&gt;&lt;a href=&quot;#footnote-1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt;
+&lt;sup class="footnote" id="ref-1"&gt;&lt;a href="#footnote-1"&gt;[1]&lt;/a&gt;&lt;/sup&gt;
 </code></pre>
-<p>kısmında gördüğünüz 1 sayısını 2-3-4-... yaparak ve sonra dipnotta</p>
+<p>k&#305;sm&#305;nda g&ouml;rd&uuml;&#287;&uuml;n&uuml;z 1 say&#305;s&#305;n&#305; 2-3-4-... yaparak ve sonra dipnotta</p>
 <pre><code class="language-html">
-&lt;ol class=&quot;footnotes&quot;&gt;
-            &lt;li id=&quot;footnote-1&quot;&gt;
-                &lt;a class=&quot;footnote-backlink&quot; href=&quot;#ref-1&quot; title=&quot;Metindeki referansa dön&quot;&gt;↑&lt;/a&gt; Kaynak: Wikimedia Vakfı, Dipnot kullanımı rehberi, 2023.
+&lt;ol class="footnotes"&gt;
+            &lt;li id="footnote-1"&gt;
+                &lt;a class="footnote-backlink" href="#ref-1" title="Metindeki referansa d&ouml;n"&gt;&uarr;&lt;/a&gt; Kaynak: Wikimedia Vakf&#305;, Dipnot kullan&#305;m&#305; rehberi, 2023.
             &lt;/li&gt;
 &lt;/ol&gt;
 </code></pre>
-<p>kısmında bu sayıyı 2-3-4-... diye değiştirerek dipnot ekleyebilirsiniz. Kullandığınız sisteme, mesela diyelim PHP tabanlı sisteme bunu entegre edebilir veya entegre etmesi için başkasından yardım alabilirsiniz.</p>
+<p>k&#305;sm&#305;nda bu say&#305;y&#305; 2-3-4-... diye de&#287;i&#351;tirerek dipnot ekleyebilirsiniz. Kulland&#305;&#287;&#305;n&#305;z sisteme, mesela diyelim PHP tabanl&#305; sisteme bunu entegre edebilir veya entegre etmesi i&ccedil;in ba&#351;kas&#305;ndan yard&#305;m alabilirsiniz.</p>
         </article>
     </main>
 
